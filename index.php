@@ -15,9 +15,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     $baremeManager->connect();
 
-    $cv = $_POST['cv'];
-    $vehicule = $_POST['vehicule'];
-    $km = $_POST['km'];
+    $cv = isset($_POST['cv']) ? $_POST['cv'] : ''; // Vérifie si la variable existe dans $_POST
+    $cv = htmlspecialchars(trim($cv)); // Nettoie les balises HTML et les espaces superflus
+
+    // Valider et nettoyer les données du véhicule
+    $vehicule = isset($_POST['vehicule']) ? $_POST['vehicule'] : '';
+    $vehicule = htmlspecialchars(trim($vehicule));
+
+    // Valider et nettoyer les données kilométriques
+    $km = isset($_POST['km']) ? $_POST['km'] : '';
+    $km = filter_var($km, FILTER_VALIDATE_INT); // Valide comme un entier
 
     $formule = $baremeManager->getFormule($vehicule, $cv, $km);
 
