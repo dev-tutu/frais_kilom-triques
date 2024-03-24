@@ -100,5 +100,8 @@ L'application fonctionne au moyen d'un formulaire qui envoie les données (véhi
 
 Pour tester que les calcules sont bons vous devez utiliser le test unitaire 
 
-```phpunit unit.php```
+```
+phpunit unit.php
+
+```
 
