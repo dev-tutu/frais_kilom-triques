@@ -45,7 +45,7 @@ Vous devez avoir un serveur MariaDB dèjà configuer et importer les données du
 
 L'application fonctionne au moyen d'un formulaire qui envoie les données (véhicule, CV, KM) vers le backend pour récupérer la formule correspondante et effectuer le calcul.
 
-    1. bareme.php
+ 1. bareme.php
     
   ```
 
