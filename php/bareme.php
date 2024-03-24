@@ -1,6 +1,7 @@
 <?php
 
     class BaremeManager extends Database {
+        
         public function getFormule($vehicule, $cv, $km) {
             try {
                 $indice_km = $this->getIndiceKM($vehicule, $km);
